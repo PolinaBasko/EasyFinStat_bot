@@ -6,6 +6,7 @@ from aiogram.fsm.context import FSMContext
 import utils
 from states import Gen
 import tickers_library
+import config
 
 import kb
 import text
@@ -60,7 +61,7 @@ async def get_statement(msg: Message, state: FSMContext):
         statement = (await state.get_data())['statement']
         print(statement)
         starter = 'https://financialmodelingprep.com/api/v3/'
-        closer = '?apikey=7dd2f065517ca2bb8ca040cf3303e50f'
+        closer = config.GET_STAT_API_TOKEN
         final = starter + statement + company + closer
         api_url = final
         res = await utils.get_statement_func(api_url)
@@ -89,7 +90,7 @@ async def get_stock_price(msg: Message, state: FSMContext):
     try:
         company = msg.text
         starter = 'https://financialmodelingprep.com/api/v3/stock-price-change/'
-        closer = '?apikey=7dd2f065517ca2bb8ca040cf3303e50f'
+        closer = config.GET_ST_PRICE_API_TOKEN
         url = starter + company + closer
         res = await utils.get_stock_price_func(url)
         res = res[0]
