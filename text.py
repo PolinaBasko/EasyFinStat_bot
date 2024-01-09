@@ -1,0 +1,12 @@
+greet = "Hi! I'm EasyFinStat bot, trading and investment assistant. I can obtain for you the latest finance statistics, provide you with stock price change and show you the latest company news. Use stock ticker instead of company name."
+menu = "📍 Main menu"
+gen_ticker_fs = "Input company ticker to derive financial statement for"
+gen_ticker_stp = "Input company ticker for stock price change check"
+gen_ticker_news = "Input company ticker to check the latest news"
+gen_exit_itermediate = "🔽 Push the button below to access Main menu"
+gen_exit = "🔽 Push the button below to access Main menu or put one more company ticker to repeat the same request"
+gen_wait = "I'm processing your request. Please wait a bit ... ⏳"
+gen_error = "Something went wrong. Probably, your stock ticker is wrong or there's a downtime on a server. Doublecheck ticker and return later."
+text_watermark = "watermark placeholder"
+help = ("Hi! I'm EasyFinStat bot, trading and investment assistant. I can obtain for you the latest finance statistics, provide you with stock price change and show you the latest company news. Use stock ticker instead of company name. You can check the "
+        "most popular companies in stock ticker library from Main menu. There are 3 options to access main menu: pushing the keyboard botton, typing 'Menu' or 'Main menu' on the keyboard. To start - type '/start'. Enjoy!")

@@ -1,0 +1,1 @@
+library = "Apple: AAPL\nSAP: SAP\nFTI: FTI\nMarathon Digital: MARA"
