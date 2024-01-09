@@ -3,6 +3,7 @@ import requests
 from telebot import types
 from constants import token
 import logging
+import config
 
 
 logger = telebot.logger
@@ -74,7 +75,7 @@ def run_EasyFin_bot(token: str) -> None:
             company = data[-2]
             statement = data[-1]
             starter = 'https://financialmodelingprep.com/api/v3/'
-            closer = '?apikey=7dd2f065517ca2bb8ca040cf3303e50f'
+            closer = config.GET_STAT_API_TOKEN
             final = starter + statement + company + closer
             url = final
             response = requests.get(url)
@@ -114,7 +115,7 @@ def run_EasyFin_bot(token: str) -> None:
         try:
             company = message.text
             starter = 'https://financialmodelingprep.com/api/v3/stock-price-change/'
-            closer = '?apikey=7dd2f065517ca2bb8ca040cf3303e50f'
+            closer = config.GET_ST_PRICE_API_TOKEN
             url = starter + company + closer
             response = requests.get(url)
             response = response.json()
@@ -136,7 +137,7 @@ def run_EasyFin_bot(token: str) -> None:
             url = "https://real-time-finance-data.p.rapidapi.com/stock-news"
             querystring = {"symbol": company, "language": "en"}
             headers = {
-                "X-RapidAPI-Key": "58027c3fb0msh8062b42813f30cdp1d5c96jsn5df802fcae2a",
+                "X-RapidAPI-Key": config.NEWS_API_TOKEN,
                 "X-RapidAPI-Host": "real-time-finance-data.p.rapidapi.com"
             }
 
