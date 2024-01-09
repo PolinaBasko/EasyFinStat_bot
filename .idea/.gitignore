@@ -6,3 +6,9 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+/middlewares.py
+/config.py
+/constants.py
+/draft.py
+/FinStatBot.py
+/middlewares.py
